@@ -1,6 +1,6 @@
 {
-  "version": "4.4.0",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v4.4.0/Instalador.Liga.Dus.Cria.4.4.exe",
-  "sha256": "7145446854D27A293BD3007192952E9B7A38F7B766AD0517FBE72CB113ADB13B",
-  "notes": "Interface responsiva em tela cheia: painéis, cards, capas, textos e botões se adaptam ao tamanho da janela. Central de Configurações atualizada para o tema preto e amarelo."
+  "version": "4.5.0",
+  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v4.5.0/Instalador.Liga.Dus.Cria.4.5.exe",
+  "sha256": "0FA6E89320D75FC72BBB0D97C114CABA45B81028CEB263A3AFF474E1FCD39EF6",
+  "notes": "Modal de atualização redesenhado com identidade preta e amarela, logo oficial, tipografia do launcher e barra de carregamento amarela personalizada."
 }
