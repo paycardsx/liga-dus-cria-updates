@@ -1,6 +1,6 @@
 {
-  "version": "5.3.0",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.3.0/Instalador.Liga.Dus.Cria.5.3.exe",
-  "sha256": "E3DABA4673462BAC7F1671AAF420EACE5114C2AB795D3D74C5D2A2250B999D53",
-  "notes": "Bomba Patch 2026 Geomatrix V4 adicionado à biblioteca como jogo de PS2, com capa original, abertura direta pelo PCSX2 e acesso às configurações do emulador. Inclui campo torrent e escolha da pasta de destino."
+  "version": "5.4.0",
+  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.4.0/Instalador.Liga.Dus.Cria.5.4.exe",
+  "sha256": "583F956C0CD21D4675094850871882DC17C13231BE6C04E64EDBCC693EB1878A",
+  "notes": "Biblioteca reorganizada em grade de três jogos por linha, com rolagem vertical para novas linhas e capas mantidas no tamanho correto."
 }
