@@ -1,6 +1,6 @@
 {
-  "version": "3.5.0",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v3.5.0/Liga-Dus-Cria-3.5.exe",
-  "sha256": "C8287BEDE658AC431726807092AA6D54759DDBB8153FE89073D9F59F64D39F00",
-  "notes": "Atualizador automático conectado ao GitHub, modal com progresso de download, música do menu, suporte a controles e botão para fechar jogos."
+  "version": "3.7.0",
+  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v3.7.0/Instalador.Liga.Dus.Cria.3.7.exe",
+  "sha256": "19CEBF2EE02370F13FFE1A12F9043BE2BA63DB819DD84C95DBC8A85CAE6F2DB8",
+  "notes": "Novo visual oficial preto e amarelo nas telas de login e biblioteca, mantendo jogos, configurações, atualizações, música e torrent acessíveis pelo launcher."
 }
