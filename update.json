@@ -1,6 +1,6 @@
 {
-  "version": "5.0.0",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.0.0/Instalador.Liga.Dus.Cria.5.0.exe",
-  "sha256": "A25C4F44F7C6F41790F6B38C46C526485811D4417803FCAE1DB8406F0BD3AF0C",
-  "notes": "Central Torrent com prévia real: nome, tamanho total e arquivos internos antes de abrir o cliente torrent, além de indicador visual de carregamento. Inclui também detecção contínua de controles."
+  "version": "5.1.0",
+  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.1.0/Instalador.Liga.Dus.Cria.5.1.exe",
+  "sha256": "AD943FB5E63E3D70B673E3BD6218BD3FF614DF0FBC04AB23163A48B7845F2C8D",
+  "notes": "A Central Torrent agora aceita link magnet ou URL direta para arquivo .torrent, valida os metadados e mostra a prévia antes de iniciar."
 }
