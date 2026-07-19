@@ -1,6 +1,6 @@
 {
-  "version": "4.7.0",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v4.7.0/Instalador.Liga.Dus.Cria.4.7.exe",
-  "sha256": "7DAC07060A1498CA6BFA0D611210533249AE3F3C9D741AFEBB721EB4D962E055",
-  "notes": "Logo oficial atualizada e exibida por completo, sem cortes ou deformações ao redimensionar a janela."
+  "version": "4.8.0",
+  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v4.8.0/Instalador.Liga.Dus.Cria.4.8.exe",
+  "sha256": "796582D9A3B36B743E6B4DFE8CC3AA227CC69F2FC0F784568706CB239EA3ECED",
+  "notes": "Integração de arquivos .torrent com o Windows: Liga Dus Cria aparece em Abrir com e recebe o arquivo diretamente na Central Torrent."
 }
