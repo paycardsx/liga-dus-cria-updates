@@ -1,6 +1,6 @@
 {
-  "version": "4.6.0",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v4.6.0/Instalador.Liga.Dus.Cria.4.6.exe",
-  "sha256": "7262B540FDAACEE10BC687E46538A74F78BA8DE494786744BE6FDD16665123E9",
-  "notes": "Mini player no topo esquerdo com play, pause e nome da faixa. Nova pasta permanente para adicionar músicas MP3/WAV e botão para abri-la pela Central de Música."
+  "version": "4.7.0",
+  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v4.7.0/Instalador.Liga.Dus.Cria.4.7.exe",
+  "sha256": "7DAC07060A1498CA6BFA0D611210533249AE3F3C9D741AFEBB721EB4D962E055",
+  "notes": "Logo oficial atualizada e exibida por completo, sem cortes ou deformações ao redimensionar a janela."
 }
