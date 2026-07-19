@@ -1,6 +1,6 @@
 {
-  "version": "3.7.0",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v3.7.0/Instalador.Liga.Dus.Cria.3.7.exe",
-  "sha256": "19CEBF2EE02370F13FFE1A12F9043BE2BA63DB819DD84C95DBC8A85CAE6F2DB8",
-  "notes": "Novo visual oficial preto e amarelo nas telas de login e biblioteca, mantendo jogos, configurações, atualizações, música e torrent acessíveis pelo launcher."
+  "version": "3.9.0",
+  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v3.9.0/Instalador.Liga.Dus.Cria.3.9.exe",
+  "sha256": "B6F0DDD56DAA13A73A36BF01F7601EFAE3820F8D561F00E2E59E6B38FAB2976B",
+  "notes": "Login e biblioteca reconstruídos com componentes reais e totalmente clicáveis. As únicas imagens da interface são a logo oficial transparente e as capas dos jogos."
 }
