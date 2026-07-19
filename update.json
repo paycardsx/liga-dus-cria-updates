@@ -1,6 +1,6 @@
 {
-  "version": "4.0.0",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v4.0.0/Instalador.Liga.Dus.Cria.4.0.exe",
-  "sha256": "081F79545D2F70C1E92C91031672620AC0C2557057F80CF20AD5335A07BCAA63",
-  "notes": "Inclui a música do menu dentro do launcher, com reprodução automática em repetição e volume padrão de 50%. Também corrige caminhos antigos ou inválidos."
+  "version": "4.1.0",
+  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v4.1.0/Instalador.Liga.Dus.Cria.4.1.exe",
+  "sha256": "D9C8E81E8DF31B067A46594FB1D0962F78BD04A07B77903AC2CA15BB7DA80698",
+  "notes": "Biblioteca redesenhada em medidas fiéis à referência, com componentes reais, capas maiores, painel lateral completo e animações de entrada, hover e seleção."
 }
