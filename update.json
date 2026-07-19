@@ -1,6 +1,6 @@
 {
-  "version": "4.2.0",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v4.2.0/Instalador.Liga.Dus.Cria.4.2.exe",
-  "sha256": "B4986AE61015D9C8828EC95B1D55F01F3FCE04D0CAA9756C435DF4F4ED42C395",
-  "notes": "Central de atualização unificada em um único modal que abre automaticamente, verifica, baixa com progresso, valida e instala sem criar uma segunda janela."
+  "version": "4.3.0",
+  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v4.3.0/Instalador.Liga.Dus.Cria.4.3.exe",
+  "sha256": "43B36B632A70167DE146449CB0E517BBD358E6675B007193E728F58863FCE96E",
+  "notes": "A troca entre jogos agora é instantânea e atualiza somente os componentes necessários, sem reconstruir ou piscar a biblioteca inteira."
 }
