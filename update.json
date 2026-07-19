@@ -1,6 +1,6 @@
 {
-  "version": "5.1.0",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.1.0/Instalador.Liga.Dus.Cria.5.1.exe",
-  "sha256": "AD943FB5E63E3D70B673E3BD6218BD3FF614DF0FBC04AB23163A48B7845F2C8D",
-  "notes": "A Central Torrent agora aceita link magnet ou URL direta para arquivo .torrent, valida os metadados e mostra a prévia antes de iniciar."
+  "version": "5.3.0",
+  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.3.0/Instalador.Liga.Dus.Cria.5.3.exe",
+  "sha256": "E3DABA4673462BAC7F1671AAF420EACE5114C2AB795D3D74C5D2A2250B999D53",
+  "notes": "Bomba Patch 2026 Geomatrix V4 adicionado à biblioteca como jogo de PS2, com capa original, abertura direta pelo PCSX2 e acesso às configurações do emulador. Inclui campo torrent e escolha da pasta de destino."
 }
