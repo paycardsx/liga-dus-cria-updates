@@ -1,6 +1,6 @@
 {
-    "version":  "6.5.0",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.5.0/Instalador.Liga.Dus.Cria.6.5.0.exe",
-    "sha256":  "192F5936BE44499D8B744D7A1EE61CDFD66CAD8F4DEA70D64896F9950D36B04D",
-    "notes":  "Escolha no launcher entre tela cheia sem bordas, janela maximizada, janela normal ou iniciar minimizado."
+    "version":  "6.5.2",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.5.2/Instalador.Liga.Dus.Cria.6.5.2.exe",
+    "sha256":  "B43B8F4DC6D2629EF00666B2707F76E3FDF002C00D9A5BDBFE0218282881AB85",
+    "notes":  "Corrige a janela oculta do Mortal Kombat 1 e adiciona configuração interna do PES 2021."
 }
