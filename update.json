@@ -1,6 +1,6 @@
 {
-    "notes":  "Integração local do Ryujinx para cópias legais em formato NSP.",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.1.0/Instalador.Liga.Dus.Cria.6.1.exe",
-    "version":  "6.1.0",
-    "sha256":  "AD2EF594E10E71F6A347EADE83F3147CE69B6A517325C2BE06A8B56EDF18373D"
+    "notes":  "O console do Ryujinx agora permanece oculto durante o jogo.",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.1.1/Instalador.Liga.Dus.Cria.6.1.1.exe",
+    "version":  "6.1.1",
+    "sha256":  "D4BF9D9EF9CEF344A8C5F010A767162C564FA6ED9D9D1D35FB38C5F0739D88AD"
 }
