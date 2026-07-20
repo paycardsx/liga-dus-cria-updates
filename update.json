@@ -1,6 +1,6 @@
 {
-    "notes":  "O console do Ryujinx agora permanece oculto durante o jogo.",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.1.1/Instalador.Liga.Dus.Cria.6.1.1.exe",
-    "version":  "6.1.1",
-    "sha256":  "D4BF9D9EF9CEF344A8C5F010A767162C564FA6ED9D9D1D35FB38C5F0739D88AD"
+    "notes":  "Detecção automática de controles agora funciona antes de todos os jogos.",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.2.0/Instalador.Liga.Dus.Cria.6.2.exe",
+    "version":  "6.2.0",
+    "sha256":  "A15B8168F883CA8457886F8F7BD9A7B233777147202424745DF8787A6F07ABF8"
 }
