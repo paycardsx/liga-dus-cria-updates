@@ -1,6 +1,6 @@
 {
-  "version": "5.6.0",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.6.0/Instalador.Liga.Dus.Cria.5.6.exe",
-  "sha256": "731DE69AFE63A9262239EC26819DD312150338685C28B0EB384DB9D02F0756B0",
-  "notes": "Nova identidade visual aplicada em todas as logos e ícones do launcher, incluindo janelas, executável, barra de tarefas, atalhos e instalador."
+    "notes":  "Biblioteca com três novos cartões de demonstração e paginação de três jogos.",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.7.0/Instalador.Liga.Dus.Cria.5.7.exe",
+    "version":  "5.7.0",
+    "sha256":  "96FE5C00FA10450AC5C5B1C74195AA53D8FE33C9408B054C01EA54E4AD427A13"
 }
