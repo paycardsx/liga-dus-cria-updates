@@ -1,6 +1,6 @@
 {
-    "notes":  "Correção para jogos que exigem permissão de administrador ao iniciar.",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.0.1/Instalador.Liga.Dus.Cria.6.0.1.exe",
-    "version":  "6.0.1",
-    "sha256":  "D16953B228152901555724574F64817E6F3824672453F713D0D7BD2375FB0941"
+    "notes":  "Integração local do Ryujinx para cópias legais em formato NSP.",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.1.0/Instalador.Liga.Dus.Cria.6.1.exe",
+    "version":  "6.1.0",
+    "sha256":  "AD2EF594E10E71F6A347EADE83F3147CE69B6A517325C2BE06A8B56EDF18373D"
 }
