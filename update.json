@@ -1,6 +1,6 @@
 {
-    "notes":  "Atualização silenciosa com abertura automática da nova versão.",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.2.1/Instalador.Liga.Dus.Cria.6.2.1.exe",
-    "version":  "6.2.1",
-    "sha256":  "7F509F3C7BDC67D056788582425719E76D5E1FF97DF1111E625578ACD85D7ED1"
+    "notes":  "Modal centralizado e atualização obrigatória antes de liberar a biblioteca.",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.3.0/Instalador.Liga.Dus.Cria.6.3.exe",
+    "version":  "6.3.0",
+    "sha256":  "C3583ACC296770531D5ED4582F1123109F67FD88923733C2FD317FDD8B8E0537"
 }
