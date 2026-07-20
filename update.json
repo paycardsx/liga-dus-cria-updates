@@ -1,6 +1,6 @@
 {
-    "version":  "6.3.2",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.3.2/Instalador.Liga.Dus.Cria.6.3.2.exe",
-    "sha256":  "145EB45D02C33ECBE601F8722C03105F6EE87C52D62224C4EFB0B6D161562653",
-    "notes":  "Localização automática do Mortal Kombat 1, PES 2021 e Spider-Man, sem seletor de executável."
+    "version":  "6.4.0",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.4.0/Instalador.Liga.Dus.Cria.6.4.0.exe",
+    "sha256":  "A4552F4E0EA875C1D2A005E9C37D49E6F664C67115C4443020711D995BCD4483",
+    "notes":  "Central de controles ampliada para Mortal Kombat 1, PES 2021 e Spider-Man, com detecção automática e teste/calibração."
 }
