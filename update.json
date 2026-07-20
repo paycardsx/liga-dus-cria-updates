@@ -1,6 +1,6 @@
 {
-    "notes":  "Música automática corrigida e novo botão flutuante de play/pause na biblioteca.",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.9.0/Instalador.Liga.Dus.Cria.5.9.exe",
-    "version":  "5.9.0",
-    "sha256":  "0AAED72EDEB5B6DDAF6974F755AD5041E9EF9FC21FDA3B8E3C8F3247BCD31F57"
+    "notes":  "Agora é possível localizar instalações autorizadas para os cartões demonstrativos.",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.0.0/Instalador.Liga.Dus.Cria.6.0.exe",
+    "version":  "6.0.0",
+    "sha256":  "9B6A8EAA22F46BFD6D505DA30F8FEF82635EDB9D8FDBEFC11E989B0D9C1AC657"
 }
