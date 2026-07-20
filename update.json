@@ -1,6 +1,6 @@
 {
-    "version":  "6.7.0",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.7.0/Instalador.Liga.Dus.Cria.6.7.0.exe",
-    "sha256":  "7C72D55E5DCEA4409E2FCB05FBA4F5FAE7ABFEE54210DC34E483E170CD1D4C11",
-    "notes":  "Mapeamento automático universal para até 4 controles, com vagas de Jogador 1 a 4 e perfil XInput aplicado a todos os jogos sem reiniciar o DS4Windows."
+    "version":  "6.9.0",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.9.0/Instalador.Liga.Dus.Cria.6.9.0.exe",
+    "sha256":  "9F452B8A3AB167246BC1BE0A351C63677B9529DA52F46BAD1A102F83F75CDD6C",
+    "notes":  "Nova Central universal com três abas e tela visual de mapeamento automático para até quatro controles."
 }
