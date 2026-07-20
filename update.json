@@ -1,6 +1,6 @@
 {
-    "version":  "7.0.1",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.0.1/Instalador.Liga.Dus.Cria.7.0.1.exe",
-    "sha256":  "ef7e8b02e38e091985ad167211c5a65228f3ea16df70b8a75950193c777804a3",
-    "notes":  "Perfil de imagem universal corrigido para todos os jogos da biblioteca."
+    "version":  "7.0.2",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.0.2/Instalador.Liga.Dus.Cria.7.0.2.exe",
+    "sha256":  "3942607adef37e0f09f061f9b2ca768ef0d972fd2b0960a4a73d6d4d1478d70f",
+    "notes":  "Correção universal do controle: entrada única XInput e todos os botões para toda a biblioteca."
 }
