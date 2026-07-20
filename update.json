@@ -1,6 +1,6 @@
 {
-    "version":  "7.0.0",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.0.0/Instalador.Liga.Dus.Cria.7.0.0.exe",
-    "sha256":  "097C2C7F74D0607C010CC8AB7D82A00FAA691B66275AFD50F7C1F994B5022227",
-    "notes":  "Controles PS4, PS5 e Xbox com imagens próprias, seleção automática e mapeamento XInput universal."
+    "version":  "7.0.1",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.0.1/Instalador.Liga.Dus.Cria.7.0.1.exe",
+    "sha256":  "ef7e8b02e38e091985ad167211c5a65228f3ea16df70b8a75950193c777804a3",
+    "notes":  "Perfil de imagem universal corrigido para todos os jogos da biblioteca."
 }
