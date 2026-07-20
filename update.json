@@ -1,6 +1,6 @@
 {
-    "notes":  "Biblioteca com três novos cartões de demonstração e paginação de três jogos.",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.7.0/Instalador.Liga.Dus.Cria.5.7.exe",
-    "version":  "5.7.0",
-    "sha256":  "96FE5C00FA10450AC5C5B1C74195AA53D8FE33C9408B054C01EA54E4AD427A13"
+    "notes":  "Compatibilidade de controles executada em segundo plano, sem exibir a janela do DS4Windows.",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.8.0/Instalador.Liga.Dus.Cria.5.8.exe",
+    "version":  "5.8.0",
+    "sha256":  "60434DD54E118048C8287A1F644FD18E3941E84F11875691BEEAF8A666A402B0"
 }
