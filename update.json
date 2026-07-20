@@ -1,6 +1,6 @@
 {
-  "version": "5.4.0",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.4.0/Instalador.Liga.Dus.Cria.5.4.exe",
-  "sha256": "583F956C0CD21D4675094850871882DC17C13231BE6C04E64EDBCC693EB1878A",
-  "notes": "Biblioteca reorganizada em grade de três jogos por linha, com rolagem vertical para novas linhas e capas mantidas no tamanho correto."
+  "version": "5.5.0",
+  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.5.0/Instalador.Liga.Dus.Cria.5.5.exe",
+  "sha256": "BBAE99B74B215AB5939D94CD53D8FDF596015F855CB669D2CB6655CA197A4521",
+  "notes": "Jogo de PS2 removido e biblioteca restaurada ao layout estável com os três jogos originais lado a lado, sem rolagem ou cartões desalinhados."
 }
