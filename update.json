@@ -1,6 +1,6 @@
 {
-    "version":  "6.4.1",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.4.1/Instalador.Liga.Dus.Cria.6.4.1.exe",
-    "sha256":  "9AD907133DCDB88B0A6D7E034C611BC6AE871472134EA7096863463D45E2B77B",
-    "notes":  "Estabiliza o controle no Spider-Man mantendo uma única instância do DS4Windows durante toda a sessão."
+    "version":  "6.5.0",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.5.0/Instalador.Liga.Dus.Cria.6.5.0.exe",
+    "sha256":  "192F5936BE44499D8B744D7A1EE61CDFD66CAD8F4DEA70D64896F9950D36B04D",
+    "notes":  "Escolha no launcher entre tela cheia sem bordas, janela maximizada, janela normal ou iniciar minimizado."
 }
