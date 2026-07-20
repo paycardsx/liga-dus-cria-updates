@@ -1,6 +1,6 @@
 {
-    "version":  "6.5.2",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.5.2/Instalador.Liga.Dus.Cria.6.5.2.exe",
-    "sha256":  "B43B8F4DC6D2629EF00666B2707F76E3FDF002C00D9A5BDBFE0218282881AB85",
-    "notes":  "Corrige a janela oculta do Mortal Kombat 1 e adiciona configuração interna do PES 2021."
+    "version":  "6.7.0",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v6.7.0/Instalador.Liga.Dus.Cria.6.7.0.exe",
+    "sha256":  "7C72D55E5DCEA4409E2FCB05FBA4F5FAE7ABFEE54210DC34E483E170CD1D4C11",
+    "notes":  "Mapeamento automático universal para até 4 controles, com vagas de Jogador 1 a 4 e perfil XInput aplicado a todos os jogos sem reiniciar o DS4Windows."
 }
