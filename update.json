@@ -1,6 +1,6 @@
 {
-  "version": "5.5.0",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.5.0/Instalador.Liga.Dus.Cria.5.5.exe",
-  "sha256": "BBAE99B74B215AB5939D94CD53D8FDF596015F855CB669D2CB6655CA197A4521",
-  "notes": "Jogo de PS2 removido e biblioteca restaurada ao layout estável com os três jogos originais lado a lado, sem rolagem ou cartões desalinhados."
+  "version": "5.6.0",
+  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v5.6.0/Instalador.Liga.Dus.Cria.5.6.exe",
+  "sha256": "731DE69AFE63A9262239EC26819DD312150338685C28B0EB384DB9D02F0756B0",
+  "notes": "Nova identidade visual aplicada em todas as logos e ícones do launcher, incluindo janelas, executável, barra de tarefas, atalhos e instalador."
 }
