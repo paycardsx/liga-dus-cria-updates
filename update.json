@@ -1,6 +1,6 @@
 {
-    "version":  "7.0.2",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.0.2/Instalador.Liga.Dus.Cria.7.0.2.exe",
-    "sha256":  "3942607adef37e0f09f061f9b2ca768ef0d972fd2b0960a4a73d6d4d1478d70f",
-    "notes":  "Correção universal do controle: entrada única XInput e todos os botões para toda a biblioteca."
+    "version":  "7.1.1",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.1.1/Instalador%20Liga%20Dus%20Cria%207.1.1.exe",
+    "sha256":  "70024d08311bbc95c291d0a8b7e97fce750638b916a1735048a528a593c1d1e9",
+    "notes":  "Removido PES 2021 duplicado do catálogo e corrigido o alinhamento da biblioteca."
 }
