@@ -1,6 +1,6 @@
 {
-    "version":  "7.2.5",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.2.5/Instalador.Liga.Dus.Cria.7.2.5.exe",
-    "sha256":  "cd8ea5c9b0b29486331c8de771ff12697818f134936fefdd2ab54aaaba69fe48",
-    "notes":  "Correção da elevação administrativa: o Liga Dus Cria volta a abrir normalmente, sem UAC. Somente o Sider 7.1.4 solicita administrador quando o PES 2021 é iniciado, permanecendo oculto."
+    "version":  "7.2.6",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.2.6/Instalador.Liga.Dus.Cria.7.2.6.exe",
+    "sha256":  "977834bb751e72f34344cda7d4ca956aa2d7c1999dbe889cd38035aaea5a43c3",
+    "notes":  "O Sider 7.1.4 continua solicitando administrador, mas agora sua janela é ocultada completamente. A chamada steam: do sider.ini também é desativada, pois o Liga Dus Cria inicia o PES2021.exe localmente."
 }
