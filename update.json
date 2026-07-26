@@ -1,6 +1,6 @@
 {
-    "version":  "7.2.7",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.2.7/Instalador.Liga.Dus.Cria.7.2.7.exe",
-    "sha256":  "e2dcc1f08ef3e84659ae6437148f2c3b2c4feb679a445230ed4a407038af8d4c",
-    "notes":  "Adiciona DRAGON BALL: Sparking! ZERO à biblioteca, detecta automaticamente o jogo instalado, usa a capa original e oculta o console de diagnóstico do Reloaded-II. As configurações agora também têm escaneamento manual de controles USB, Bluetooth, DirectInput e XInput."
+    "version":  "7.2.8",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.2.8/Instalador.Liga.Dus.Cria.7.2.8.exe",
+    "sha256":  "daf325b482707aa1cb6863f91caff5e7ef0340dc7459bea992f1b5cde31245c2",
+    "notes":  "Corrige a ocultação automática da janela de diagnóstico do Reloaded-II no Windows 11, inclusive quando hospedada pelo Windows Terminal, sem ocultar a janela gráfica de DRAGON BALL: Sparking! ZERO."
 }
