@@ -1,6 +1,6 @@
 {
     "version":  "7.2.8",
     "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.2.8/Instalador.Liga.Dus.Cria.7.2.8.exe",
-    "sha256":  "63415d784dfed24f966121439eb0c2680d2ea4eb2ad9c162e3817ca92ff97292",
-    "notes":  "Corrige a janela do Reloaded-II, separa até quatro controles em portas XInput com cores por jogador e garante que o PES 2021 respeite a configuração de tela cheia sem bordas durante a inicialização."
+    "sha256":  "a3d523fb7a2e9615ba0caac686e088667d51c3ba4e4ee5d92629546bd4f71baf",
+    "notes":  "Corrige a janela do Reloaded-II, controles XInput e tela cheia do PES 2021. No Sparking! ZERO, força a cultura pt-BR e esclarece que a dublagem brasileira instalada substitui a opção de voz Inglês."
 }
