@@ -1,6 +1,6 @@
 {
-    "version":  "7.2.6",
-    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.2.6/Instalador.Liga.Dus.Cria.7.2.6.exe",
-    "sha256":  "977834bb751e72f34344cda7d4ca956aa2d7c1999dbe889cd38035aaea5a43c3",
-    "notes":  "O Sider 7.1.4 continua solicitando administrador, mas agora sua janela é ocultada completamente. A chamada steam: do sider.ini também é desativada, pois o Liga Dus Cria inicia o PES2021.exe localmente."
+    "version":  "7.2.7",
+    "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.2.7/Instalador.Liga.Dus.Cria.7.2.7.exe",
+    "sha256":  "e2dcc1f08ef3e84659ae6437148f2c3b2c4feb679a445230ed4a407038af8d4c",
+    "notes":  "Adiciona DRAGON BALL: Sparking! ZERO à biblioteca, detecta automaticamente o jogo instalado, usa a capa original e oculta o console de diagnóstico do Reloaded-II. As configurações agora também têm escaneamento manual de controles USB, Bluetooth, DirectInput e XInput."
 }
