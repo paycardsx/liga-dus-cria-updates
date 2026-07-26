@@ -1,6 +1,6 @@
 {
     "version":  "7.2.8",
     "url":  "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.2.8/Instalador.Liga.Dus.Cria.7.2.8.exe",
-    "sha256":  "c670e26dc7874b089c6c70f7a7c498681cfbaf8b3bbe636ec7ab281ff49465b5",
-    "notes":  "Corrige a janela de diagnóstico do Reloaded-II no Windows 11 e separa automaticamente até quatro controles em portas XInput independentes. Controles PS4 recebem cores por jogador: azul, vermelho, amarelo e verde."
+    "sha256":  "63415d784dfed24f966121439eb0c2680d2ea4eb2ad9c162e3817ca92ff97292",
+    "notes":  "Corrige a janela do Reloaded-II, separa até quatro controles em portas XInput com cores por jogador e garante que o PES 2021 respeite a configuração de tela cheia sem bordas durante a inicialização."
 }
