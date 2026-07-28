@@ -1,7 +1,7 @@
 {
-  "version": "7.2.8",
-  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.2.8/Instalador.Liga.Dus.Cria.7.2.8.exe",
-  "sha256": "1bd3baaa0fbb63df546bbcef3f92d69fc69f8b92cf6abdd88189864e80d88534",
-  "notes": "Corrige navegação, pesquisa, filtros e textos da biblioteca; separa controles em vagas XInput com cores por jogador; força tela cheia do PES 2021; abre o Sparking Zero diretamente com o patch e as vozes instaladas; oculta com segurança o diagnóstico do Reloaded-II no console clássico e no Windows Terminal.",
+  "version": "7.2.9",
+  "url": "https://github.com/paycardsx/liga-dus-cria-updates/releases/download/v7.2.9/Instalador.Liga.Dus.Cria.7.2.9.exe",
+  "sha256": "5638049f18bd5193d4b1a832bf25d912eb99bc0efab5eac182fc9ad54d3f1947",
+  "notes": "Adiciona uma biblioteca visual com 100 jogos, incluindo God of War Ragnarök e TEKKEN 8; organiza todas as capas em uma única pasta, mantém uma capa por jogo e preserva a arte original do DRAGON BALL: Sparking! ZERO. Os novos itens são apenas catálogo e capas, sem arquivos dos jogos.",
   "mandatory": false
 }
