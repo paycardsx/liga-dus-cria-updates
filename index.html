@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+<title>Technical Fight 3D</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#05070b;font-family:Arial,Helvetica,sans-serif;color:white;touch-action:none}
+  #game{position:fixed;inset:0}
+  #hud{position:fixed;inset:0;pointer-events:none}
+  .top{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:min(94vw,980px);display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center}
+  .fighter{display:flex;flex-direction:column;gap:5px}
+  .fighter.right{align-items:flex-end}
+  .name{font-weight:900;letter-spacing:.08em;text-shadow:0 2px 10px #000}
+  .bar{height:20px;width:100%;background:#1a1f2b;border:2px solid rgba(255,255,255,.28);overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.45)}
+  .bar>span{display:block;height:100%;width:100%;background:linear-gradient(90deg,#49e86d,#d8ff5b);transition:width .16s}
+  .right .bar>span{margin-left:auto;background:linear-gradient(90deg,#ffce3a,#ff5b5b)}
+  #timer{font-size:32px;font-weight:1000;min-width:72px;text-align:center;text-shadow:0 2px 10px #000}
+  #message{position:absolute;left:50%;top:30%;transform:translate(-50%,-50%);font-size:clamp(32px,8vw,84px);font-weight:1000;letter-spacing:.08em;text-shadow:0 5px 18px #000;opacity:0;transition:opacity .2s;text-align:center}
+  #message.show{opacity:1}
+  #hint{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);font-size:12px;opacity:.62;text-align:center;width:100%;padding:0 8px}
+  #controls{position:fixed;inset:0;pointer-events:none}
+  .pad{position:absolute;bottom:28px;display:flex;gap:12px;pointer-events:auto}
+  .leftpad{left:18px}
+  .rightpad{right:18px}
+  button.ctrl{width:68px;height:68px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(15,19,28,.72);color:#fff;font-weight:900;font-size:20px;backdrop-filter:blur(10px);box-shadow:0 8px 24px rgba(0,0,0,.35)}
+  button.ctrl:active{transform:scale(.94);background:rgba(255,255,255,.18)}
+  #restart{position:fixed;top:78px;left:50%;transform:translateX(-50%);pointer-events:auto;border:1px solid rgba(255,255,255,.22);background:rgba(5,8,14,.62);color:#fff;border-radius:999px;padding:9px 16px;font-weight:800;display:none}
+  #restart.show{display:block}
+  @media (min-width:800px){button.ctrl{width:62px;height:62px}.pad{bottom:20px}}
+</style>
+</head>
+<body>
+<div id="game"></div>
+<div id="hud">
+  <div class="top">
+    <div class="fighter"><div class="name">KAIO</div><div class="bar"><span id="p1hp"></span></div></div>
+    <div id="timer">60</div>
+    <div class="fighter right"><div class="name">RAZOR</div><div class="bar"><span id="p2hp"></span></div></div>
+  </div>
+  <div id="message"></div>
+  <div id="hint">Teclado: A/D mover · J soco · K chute · L defender · R reiniciar</div>
+</div>
+<div id="controls">
+  <div class="pad leftpad">
+    <button class="ctrl" data-hold="left">◀</button>
+    <button class="ctrl" data-hold="right">▶</button>
+  </div>
+  <div class="pad rightpad">
+    <button class="ctrl" data-action="punch">👊</button>
+    <button class="ctrl" data-action="kick">🦵</button>
+    <button class="ctrl" data-hold="block">🛡</button>
+  </div>
+</div>
+<button id="restart">REINICIAR</button>
+
+<script type="module">
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js";
+
+const mount=document.getElementById("game");
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(0x07101c);
+scene.fog=new THREE.Fog(0x07101c,18,38);
+
+const camera=new THREE.PerspectiveCamera(48,innerWidth/innerHeight,.1,100);
+camera.position.set(0,5.3,13);
+camera.lookAt(0,2,0);
+
+const renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:"high-performance"});
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));
+renderer.setSize(innerWidth,innerHeight);
+renderer.shadowMap.enabled=true;
+renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+mount.appendChild(renderer.domElement);
+
+scene.add(new THREE.HemisphereLight(0x9fcfff,0x1f120e,1.55));
+const key=new THREE.DirectionalLight(0xffffff,2.8);
+key.position.set(-4,9,6);key.castShadow=true;scene.add(key);
+const rim=new THREE.PointLight(0xff3b66,45,18,2);rim.position.set(6,4,-4);scene.add(rim);
+const rim2=new THREE.PointLight(0x3aa8ff,38,18,2);rim2.position.set(-6,5,-3);scene.add(rim2);
+
+const floor=new THREE.Mesh(
+  new THREE.PlaneGeometry(34,16),
+  new THREE.MeshStandardMaterial({color:0x111827,roughness:.78,metalness:.18})
+);
+floor.rotation.x=-Math.PI/2;floor.receiveShadow=true;scene.add(floor);
+
+const grid=new THREE.GridHelper(34,34,0x31506e,0x1c2a3d);
+grid.position.y=.01;scene.add(grid);
+
+for(let i=-4;i<=4;i++){
+  const pillar=new THREE.Mesh(
+    new THREE.BoxGeometry(.45,5.5,.45),
+    new THREE.MeshStandardMaterial({color:i%2?0x1c2a3d:0x2d1d28,metalness:.5,roughness:.45})
+  );
+  pillar.position.set(i*3.2,2.75,-5.6);
+  pillar.castShadow=true;scene.add(pillar);
+}
+
+function mat(c){return new THREE.MeshStandardMaterial({color:c,roughness:.48,metalness:.12});}
+function limb(geo,color){const m=new THREE.Mesh(geo,mat(color));m.castShadow=true;return m;}
+
+function createFighter(primary,secondary,skin){
+  const root=new THREE.Group();
+  const hips=new THREE.Group();hips.position.y=1.7;root.add(hips);
+
+  const torso=limb(new THREE.BoxGeometry(1.05,1.45,.58),primary);torso.position.y=.85;hips.add(torso);
+  const chest=limb(new THREE.BoxGeometry(1.18,.35,.66),secondary);chest.position.set(0,1.24,0);hips.add(chest);
+  const head=limb(new THREE.SphereGeometry(.39,20,16),skin);head.position.y=1.92;hips.add(head);
+  const hair=limb(new THREE.BoxGeometry(.7,.2,.68),0x111111);hair.position.set(0,2.2,-.02);hips.add(hair);
+
+  const armL=new THREE.Group(), armR=new THREE.Group();
+  armL.position.set(-.7,1.35,0);armR.position.set(.7,1.35,0);hips.add(armL,armR);
+  const uaGeo=new THREE.BoxGeometry(.34,.95,.34);
+  const faGeo=new THREE.BoxGeometry(.3,.88,.3);
+  const ual=limb(uaGeo,secondary),uar=limb(uaGeo,secondary);
+  ual.position.y=-.38;uar.position.y=-.38;armL.add(ual);armR.add(uar);
+  const foreL=new THREE.Group(),foreR=new THREE.Group();
+  foreL.position.y=-.82;foreR.position.y=-.82;armL.add(foreL);armR.add(foreR);
+  const fal=limb(faGeo,skin),far=limb(faGeo,skin);fal.position.y=-.36;far.position.y=-.36;foreL.add(fal);foreR.add(far);
+
+  const legL=new THREE.Group(),legR=new THREE.Group();
+  legL.position.set(-.32,.1,0);legR.position.set(.32,.1,0);hips.add(legL,legR);
+  const thighGeo=new THREE.BoxGeometry(.42,1.05,.46);
+  const shinGeo=new THREE.BoxGeometry(.38,.95,.4);
+  const tl=limb(thighGeo,primary),tr=limb(thighGeo,primary);tl.position.y=-.45;tr.position.y=-.45;legL.add(tl);legR.add(tr);
+  const shinL=new THREE.Group(),shinR=new THREE.Group();shinL.position.y=-.95;shinR.position.y=-.95;legL.add(shinL);legR.add(shinR);
+  const sl=limb(shinGeo,0x171717),sr=limb(shinGeo,0x171717);sl.position.y=-.4;sr.position.y=-.4;shinL.add(sl);shinR.add(sr);
+  const footGeo=new THREE.BoxGeometry(.45,.24,.75);
+  const fl=limb(footGeo,0x080808),fr=limb(footGeo,0x080808);fl.position.set(0,-.9,.17);fr.position.set(0,-.9,.17);shinL.add(fl);shinR.add(fr);
+
+  root.userData={hips,armL,armR,foreL,foreR,legL,legR,shinL,shinR};
+  return root;
+}
+
+const p1=createFighter(0x135bd8,0x101820,0xd99569);
+const p2=createFighter(0xb61e3f,0x201014,0xb96f51);
+scene.add(p1,p2);
+p1.position.x=-3;p2.position.x=3;p2.rotation.y=Math.PI;
+
+const state={
+  p1:{hp:100,x:-3,blocking:false,cool:0,hit:0},
+  p2:{hp:100,x:3,blocking:false,cool:0,hit:0},
+  over:false,time:60,acc:0
+};
+const keys={left:false,right:false,block:false};
+let last=performance.now();
+
+const p1hp=document.getElementById("p1hp"),p2hp=document.getElementById("p2hp"),timer=document.getElementById("timer");
+const msg=document.getElementById("message"),restart=document.getElementById("restart");
+
+function poseIdle(f,t){
+  const u=f.userData;
+  u.armL.rotation.z=.18+Math.sin(t*3)*.05;
+  u.armR.rotation.z=-.18-Math.sin(t*3)*.05;
+  u.armL.rotation.x=-.25;u.armR.rotation.x=-.25;
+  u.foreL.rotation.x=-.55;u.foreR.rotation.x=-.55;
+  u.legL.rotation.x=Math.sin(t*2)*.03;u.legR.rotation.x=-Math.sin(t*2)*.03;
+}
+function resetPose(f){
+  const u=f.userData;
+  for(const k of ["armL","armR","foreL","foreR","legL","legR","shinL","shinR"]){u[k].rotation.set(0,0,0);}
+}
+function flashHit(f){
+  f.scale.set(1.06,.96,1.06);
+  setTimeout(()=>f.scale.set(1,1,1),90);
+}
+function distance(){return Math.abs(state.p2.x-state.p1.x);}
+function hit(attacker,target,damage,range){
+  if(state.over||distance()>range)return;
+  const reduced=target.blocking?Math.ceil(damage*.2):damage;
+  target.hp=Math.max(0,target.hp-reduced);
+  target.hit=.18;
+  flashHit(target===state.p1?p1:p2);
+  if(!target.blocking){
+    if(target===state.p1)state.p1.x-=.18; else state.p2.x+=.18;
+  }
+  syncHud();
+  if(target.hp<=0)finish(attacker===state.p1?"KAIO VENCE":"RAZOR VENCE");
+}
+function attack(which,type){
+  const s=which==="p1"?state.p1:state.p2;
+  const enemy=which==="p1"?state.p2:state.p1;
+  const f=which==="p1"?p1:p2;
+  if(state.over||s.cool>0)return;
+  s.cool=type==="punch"?.42:.68;
+  resetPose(f);
+  const u=f.userData;
+  if(type==="punch"){
+    u.armR.rotation.x=-1.15;u.foreR.rotation.x=-.9;
+    setTimeout(()=>hit(s,enemy,8,1.9),90);
+  }else{
+    u.legR.rotation.x=-1.05;u.shinR.rotation.x=.35;
+    setTimeout(()=>hit(s,enemy,13,2.15),120);
+  }
+  setTimeout(()=>resetPose(f),220);
+}
+function finish(text){
+  state.over=true;msg.textContent=text;msg.classList.add("show");restart.classList.add("show");
+}
+function syncHud(){
+  p1hp.style.width=state.p1.hp+"%";p2hp.style.width=state.p2.hp+"%";timer.textContent=Math.max(0,Math.ceil(state.time));
+}
+function restartFight(){
+  state.p1.hp=100;state.p2.hp=100;state.p1.x=-3;state.p2.x=3;state.p1.cool=0;state.p2.cool=0;state.p1.blocking=false;state.p2.blocking=false;state.time=60;state.over=false;
+  msg.classList.remove("show");restart.classList.remove("show");syncHud();
+}
+restart.addEventListener("click",restartFight);
+
+function setHold(name,on){keys[name]=on;if(name==="block")state.p1.blocking=on;}
+document.querySelectorAll("[data-hold]").forEach(b=>{
+  const n=b.dataset.hold;
+  for(const ev of ["pointerdown","touchstart"])b.addEventListener(ev,e=>{e.preventDefault();setHold(n,true)});
+  for(const ev of ["pointerup","pointercancel","pointerleave","touchend"])b.addEventListener(ev,e=>{e.preventDefault();setHold(n,false)});
+});
+document.querySelectorAll("[data-action]").forEach(b=>b.addEventListener("pointerdown",e=>{e.preventDefault();attack("p1",b.dataset.action)}));
+
+addEventListener("keydown",e=>{
+  if(e.repeat&&["j","k"].includes(e.key.toLowerCase()))return;
+  const k=e.key.toLowerCase();
+  if(k==="a")setHold("left",true);
+  if(k==="d")setHold("right",true);
+  if(k==="l")setHold("block",true);
+  if(k==="j")attack("p1","punch");
+  if(k==="k")attack("p1","kick");
+  if(k==="r")restartFight();
+});
+addEventListener("keyup",e=>{
+  const k=e.key.toLowerCase();
+  if(k==="a")setHold("left",false);
+  if(k==="d")setHold("right",false);
+  if(k==="l")setHold("block",false);
+});
+
+function ai(dt,t){
+  if(state.over)return;
+  const d=distance();
+  state.p2.blocking=false;
+  if(state.p2.cool<=0){
+    if(d>2.0){state.p2.x-=Math.min(1.7*dt,d-1.85);}
+    else{
+      const r=Math.sin(t*2.17)+Math.sin(t*.73)*.4;
+      if(r>.75)attack("p2","kick");
+      else if(r>-.1)attack("p2","punch");
+      else if(r<-.85)state.p2.blocking=true;
+    }
+  }
+}
+function animate(now){
+  requestAnimationFrame(animate);
+  const dt=Math.min(.035,(now-last)/1000);last=now;
+  const t=now/1000;
+  if(!state.over){
+    state.time-=dt;
+    if(state.time<=0)finish(state.p1.hp===state.p2.hp?"EMPATE":state.p1.hp>state.p2.hp?"KAIO VENCE":"RAZOR VENCE");
+    state.p1.cool=Math.max(0,state.p1.cool-dt);state.p2.cool=Math.max(0,state.p2.cool-dt);
+    state.p1.hit=Math.max(0,state.p1.hit-dt);state.p2.hit=Math.max(0,state.p2.hit-dt);
+    const speed=2.7*dt;
+    if(keys.left)state.p1.x-=speed;
+    if(keys.right)state.p1.x+=speed;
+    state.p1.x=Math.max(-6.2,Math.min(state.p1.x,state.p2.x-1.45));
+    state.p2.x=Math.min(6.2,Math.max(state.p2.x,state.p1.x+1.45));
+    ai(dt,t);
+  }
+  p1.position.x=THREE.MathUtils.lerp(p1.position.x,state.p1.x,.22);
+  p2.position.x=THREE.MathUtils.lerp(p2.position.x,state.p2.x,.22);
+  p1.position.y=state.p1.hit?Math.sin(state.p1.hit*40)*.04:0;
+  p2.position.y=state.p2.hit?Math.sin(state.p2.hit*40)*.04:0;
+  if(state.p1.cool<=0)poseIdle(p1,t);
+  if(state.p2.cool<=0)poseIdle(p2,t+.8);
+  p1.userData.armL.rotation.x=state.p1.blocking?-1.05:p1.userData.armL.rotation.x;
+  p1.userData.armR.rotation.x=state.p1.blocking?-1.05:p1.userData.armR.rotation.x;
+  p2.userData.armL.rotation.x=state.p2.blocking?-1.05:p2.userData.armL.rotation.x;
+  p2.userData.armR.rotation.x=state.p2.blocking?-1.05:p2.userData.armR.rotation.x;
+
+  const center=(p1.position.x+p2.position.x)/2;
+  camera.position.x=THREE.MathUtils.lerp(camera.position.x,center*.16,.025);
+  camera.lookAt(center*.12,1.9,0);
+  syncHud();
+  renderer.render(scene,camera);
+}
+requestAnimationFrame(animate);
+
+addEventListener("resize",()=>{
+  camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));
+});
+syncHud();
+msg.textContent="FIGHT!";msg.classList.add("show");setTimeout(()=>msg.classList.remove("show"),900);
+</script>
+</body>
+</html>
